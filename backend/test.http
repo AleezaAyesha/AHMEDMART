@@ -1,0 +1,91 @@
+### HEALTH CHECK
+GET http://localhost:5000/
+Accept: application/json
+
+### REGISTER CUSTOMER
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "John Customer",
+  "email": "customer@test.com",
+  "password": "123456",
+  "role": "customer",
+  "phoneNumber": "9999999999",
+  "address": "Customer Street 1",
+  "credit": 100
+}
+
+### REGISTER ADMIN
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Alice Admin",
+  "email": "admin@test.com",
+  "password": "admin123",
+  "role": "admin",
+  "phoneNumber": "8888888888",
+  "address": "Admin Office",
+  "credit": 0
+}
+
+### LOGIN CUSTOMER
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "customer@test.com",
+  "password": "123456"
+}
+
+### LOGIN ADMIN
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@test.com",
+  "password": "admin123"
+}
+
+### GET CUSTOMER PROFILE (replace <CUSTOMER_ID>)
+GET http://localhost:5000/api/users/<CUSTOMER_ID>
+Accept: application/json
+
+### UPDATE CUSTOMER PROFILE
+PUT http://localhost:5000/api/users/<CUSTOMER_ID>
+Content-Type: application/json
+
+{
+  "address": "New Customer Address",
+  "phoneNumber": "1111111111"
+}
+
+### SEND WHATSAPP MESSAGE
+POST http://localhost:5000/api/whatsapp/send
+Content-Type: application/json
+
+{
+  "phoneNumber": "9999999999",
+  "message": "Hello John! This is a test message."
+}
+
+### SEND ORDER UPDATE
+POST http://localhost:5000/api/whatsapp/order-update
+Content-Type: application/json
+
+{
+  "phoneNumber": "9999999999",
+  "orderId": "ORDER123",
+  "status": "Shipped"
+}
+
+### SEND OTP
+POST http://localhost:5000/api/whatsapp/send-otp
+Content-Type: application/json
+
+{
+  "phoneNumber": "9999999999",
+  "otp": "123456"
+}
+

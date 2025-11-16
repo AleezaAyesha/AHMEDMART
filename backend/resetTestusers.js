@@ -1,0 +1,38 @@
+const users = [
+  {
+    name: "Bob Builder",
+    email: "bob@example.com",
+    password: "bob12345",
+    role: "customer",
+    phoneNumber: "1010101010",
+    address: "Builder Street 1",
+    credit: 50,
+  },
+  {
+    name: "Clara Manager",
+    email: "clara@example.com",
+    password: "clara123",
+    role: "admin",
+    phoneNumber: "2020202020",
+    address: "Manager Office",
+    credit: 0,
+  },
+  {
+    name: "Eve Shopper",
+    email: "eve@example.com",
+    password: "evepass",
+    role: "customer",
+    phoneNumber: "3030303030",
+    address: "Shopper Lane",
+    credit: 20,
+  },
+  {
+    name: "Dave Supplier",
+    email: "dave@example.com",
+    password: "dave321",
+    role: "customer",
+    phoneNumber: "4040404040",
+    address: "Supplier Road",
+    credit: 0,
+  },
+];
