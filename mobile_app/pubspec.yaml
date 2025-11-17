@@ -1,0 +1,21 @@
+name: ahmedmart
+description: AhmedMart Mobile App
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.2.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.0.5
+  http: ^1.1.0
+  shared_preferences: ^2.1.1
+  fluttertoast: ^8.2.1
+  image_picker: ^0.8.7+5
+  cached_network_image: ^3.2.3
+  intl: ^0.18.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
